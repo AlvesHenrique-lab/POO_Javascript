@@ -1,0 +1,144 @@
+<DOCTYPE html>
+    <html lang="Pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Orientacao Objetos em JavaScript</title>
+    </head>
+
+    <body>
+        <h1>Orientação Objetos JavaScript</h1>
+        <hr>
+
+        <!--TesteBanco-->
+        <div>
+            <div>|Banco</div>
+            <ul>
+                <li>TesteBanco: <a href="https://github.com/AlvesHenrique-lab/POO-JS/blob/main/POO-JS-main/JS_POO/Banco/TesteBanco.html"> acesse aqui!</a></li>
+            </ul>
+        </div>
+        <!--CSS-->
+        <style>
+            h1 {
+                text-align: center;
+                color: chartreuse;
+                font-size: 50px;
+            }
+        </style>
+
+        <script>
+            //-------------------------------------------
+            // Varios clientes e suas respectivas contas
+            //-------------------------------------------
+            function Person1(first, last, contaPoupanca, contaCorrente) {
+
+                // property and method definitions
+                this.first = first;
+                this.last = last;
+                this.contaPoupanca = contaPoupanca;
+                this.contaCorrente = contaCorrente;
+                //...
+
+            }
+            var cliente = new Person1('Bruno', 'Henrique', ['50000.00', '0.03'], ['220000.00', '40000.00']);
+            Person1 = function() {
+                alert('Criando uma conta Corrente para o cliente Bruno Henrique...');
+            }
+
+            //-----------------------------------------
+            // Criacao do cliente Everton Ribeiro e sua respectiva 
+            // conta corrente com saldo inicail e cheque especial
+
+            function Person2(first, last, contaCorrente) {
+
+                // property and method definitions
+                this.first = first;
+                this.last = last;
+                this.contaCorrente = contaCorrente;
+                //...
+
+            }
+            var cliente = new Person2('Everton', 'Ribeiro', ['45000', '35000.00']);
+            Person2.prototype.farewell = function() {
+                alert('Criando uma conta Corrente para Everton Ribeiro...');
+            }
+
+            //-----------------------------------------------------
+            // Criação do cliente Filipe Luis e sua respectiva
+            // conta corrente com saldo inicial, sem cheque especial
+            function person3(first, last, contaCorrente) {
+
+                // property and method definions
+                this.first = first;
+                this.last = last;
+                this.contaCorrente = contaCorrente;
+                //...
+
+            }
+            var cliente = new person3('Filipe', 'Luiz', '70000');
+            person3.prototype.farewell = function() {
+                alert('Criando uma conta para o Filipe Luiz...')
+            }
+
+            //-----------------------------------------------
+            // criacao do Cliente Gabriel Barbosa
+            //
+            function person4(first, last, contaPoupanca) {
+
+                // property and method definions
+                this.first = first;
+                this.last = last;
+                this.contaPoupanca = contaPoupanca;
+                //...
+
+            }
+            var cliente = new person4('Gabriel', 'Barbosa', ['220000.00', '0.03']);
+            person4.prototype.farewell = function() {
+                alert('Criando uma conta corrente para Gabriel Barbosa...')
+            }
+
+            //---------------------------------------------------------
+            // criacao do cliente Diego Alves e sua respectiva conta com saldo inicail
+            //
+            function person5(first, last, contaCorrente) {
+
+                // property and method definions
+                this.first = first;
+                this.last = last;
+                this.contaCorrente = contaCorrente;
+                //...
+
+            }
+            var cliente = new person5('Diego', 'Alves', '50000');
+            person5.prototype.farewell = function() {
+                alert('Criando uma conta corrente para Diego Alves...')
+            }
+
+            //-------------------------------------------------------------
+            // criaccao da cliente Lorena Lara com conta conjunta com Diego Alves
+            //
+            function person6(first, last) {
+
+                // property and method definions
+                this.first = first;
+                this.last = last;
+                //
+
+            }
+            var cliente = new person6('Lorena', 'Lara');
+            person6.prototype.farewell = function() {
+                alert('Diego Alves autorizou o cadastro de sua conta corrente como sendo conjunta a cliente Lorena Lara...')
+            }
+
+            //----------------------------------------------------------------
+            // gerar o relatoio 
+            var relatorio = {
+                gerar: function() {
+                    alert('Gerar o Relatorio...');
+                }
+            };
+        </script>
+    </body>
+
+    </html>

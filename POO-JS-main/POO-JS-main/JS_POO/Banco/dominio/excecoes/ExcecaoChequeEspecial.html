@@ -1,0 +1,36 @@
+<DOCTYPE HTML>
+    <html lang="Pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>ExcecaoChequeEspecial</title>
+    </head>
+
+    <body>
+        <h1>Código JavaScript</h1>
+        <header>
+            <!--Codigo-->>
+        </header>>
+
+        <script>
+            // Usamos a extends palavra-chave para dizer que esta classe herda de outra classe.
+            // No caso, Exception 'vai Herdar' ExcecaoChequeEspecial
+            class ExccecaoChequeEspecial extends Exception {
+
+                #deficit; // # faz ficar privado
+
+                constructor(mensagem, deficit) {
+                    super(mensagem);
+                    this.deficit = deficit;
+                }
+
+                getDeficit() {
+                    return deficit;
+                }
+
+            }
+        </script>
+    </body>
+
+    </html>
